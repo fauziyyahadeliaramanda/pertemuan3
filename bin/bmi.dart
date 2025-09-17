@@ -38,3 +38,16 @@ void hitungBMI(double tinggiCm, double beratKg, List<Map<String, dynamic>> riway
     'kategori': kategori,
   });
 }
+
+void tampilkanRiwayat(List<Map<String, dynamic>> riwayat) {
+  print("\n=== Riwayat Perhitungan BMI ===");
+  for (int i = 0; i < riwayat.length; i++) {
+    var data = riwayat[i];
+    print(
+      "${i + 1}. Tinggi: ${data['tinggi']} cm, "
+      "Berat: ${data['berat']} kg, "
+      "BMI: ${data['bmi'].toStringAsFixed(2)} "
+      "(${data['kategori']})"
+    );
+  }
+}
